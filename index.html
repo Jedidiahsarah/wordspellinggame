@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spelling Game</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body class=" bg-light ">
+    <div class="container  mt-5 ">
+        <audio id="music">
+            <source src="audio/bensound-littleidea.mp3" type="audio/ogg">
+            <source src="audio/bensound-littleidea.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div>
+            <!-- Example single danger button -->
+            <div class="btn-group ml-auto">
+                <div class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class='bx bxs-cog bx-lg' style='color:#000000; font-size: 40px;'></i>
+                </div>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="index.html">New Game</a>
+                    <a class="dropdown-item sound" href="#">Music <span class="ml-auto mt-3 "><i class='bx bxs-music' style='color:#000000; font-size: 30px; margin-top: 10px;'></i></span></a>
+                    <a class="dropdown-item theme" href="#">Choose Theme</a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="content mt-2">
+            <div class="row">
+                <div class="col-6">
+                    <div class="bg-dark text-white mt-4 mr-auto text-center" id="score" style="height: 40px; width: 100px;"></div>
+                </div>
+
+                <div class="col-6">
+                    <div class="bg-dark text-white mt-4 ml-auto text-center" id="counter" style="height: 40px; width: 100px;">
+                        00:00
+                    </div>
+                </div>
+            </div>
+            <h1 class="text-center ">Spelling Game</h1>
+            <p class="text-center text-danger  font-italic">Type the correct word in the box</p>
+
+
+            <div class="row p-0 ">
+                <div class="col-lg-6  col-sm-12 bg-dark rounded ">
+                    <h4 id="wrongWord" class="text-center text-white"></h4>
+                    <h4 id="correctWord" class="text-center text-white d-none"></h4>
+                </div>
+
+                <div class="col-lg-6 col-sm-12 p-0">
+                    <input type="text" class="form-control text-center" id="answer" placeholder="Enter correct spelling"
+                        autofocus>
+                </div>
+                <button class="btn btn-block btn-danger  mt-2" id="btn">Submit</button>
+            </div>
+        </div>
+        <div class="scoreBoard bg-white  m-auto " style="display: none;">
+            <h1 class="text-danger display-3 text-center">Game Over</h1>
+            <h4 class="text-center font-weight-bold"> Your got <span class="correct"></span> answers correctly.</h4>
+            <h4 class="text-center font-weight-bold"> Your score is <span class="result"></span></h4>
+            <div class="text-center mt-3">
+
+                <button class="btn btn-danger mb-5" id="play">Play Again</button>
+            </div>
+        </div>
+        <div class="next bg-white  m-auto" style="display: none;">
+            <!-- <h1 class="text-danger display-3 text-center">Game Over</h1> -->
+            <h4 class="text-center font-weight-bold"> Your got <span class="correctNext"></span> answers correctly.</h4>
+            <h4 class="text-center font-weight-bold"> Your score is <span class="resultNext"></span></h4>
+            <div class="text-center mt-3 ">
+
+                <button class="btn btn-danger mb-5" id="nextBtn">Level 2</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
